@@ -14,3 +14,12 @@ resource "null_resource" "create_destroy_cluster" {
     command = "kops delete cluster ${var.cluster_name} --state=s3://${var.s3_bucket} --yes"
   }
 }
+
+resource "null_resource" "install_metrics_api" {
+
+  depends_on = ["null_resource.create_destroy_cluster"]
+
+  provisioner "local-exec" {
+    command = "${path.module}/scripts/metrics.sh"
+  }
+}
