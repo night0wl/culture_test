@@ -1,0 +1,14 @@
+{
+  "locations": [
+    { "id": 1, "name": "London"},
+    { "id": 2, "name": "TelAviv"}
+  ],
+  "posts": [
+    { "id": 1, "locId": 1, "body": "The best restaurant in town" },
+    { "id": 2, "locId": 2, "body": "Come to this beach!" }
+  ],
+  "comments": [
+    { "id": 1, "body": "I didn't like the crab", "postId": 1 },
+    { "id": 2, "body": "So nice!", "postId": 2 }
+  ]
+}
