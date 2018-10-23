@@ -28,5 +28,5 @@ variable "master_size" {
 variable "node_size" {
   type        = "string"
   description = "The AWS instance type to use for the k8s cluster nodes"
-  default     = "t2.nano"
+  default     = "t2.small"
 }
