@@ -14,8 +14,7 @@ variable "s3_bucket" {
 }
 
 variable "zones" {
-# TODO: This should be a list and be interpolated to a comma separated string
-  type        = "string"
+  type        = "list"
   description = "The AWS AZ to deploy the cluster to"
 }
 

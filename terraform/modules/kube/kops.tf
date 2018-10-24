@@ -6,7 +6,7 @@
 resource "null_resource" "create_destroy_cluster" {
 
   provisioner "local-exec" {
-    command = "kops create cluster ${var.cluster_name} --state=s3://${var.s3_bucket} --zones ${var.zones} --master-size=${var.master_size} --node-size=${var.node_size} --yes"
+    command = "kops create cluster ${var.cluster_name} --state=s3://${var.s3_bucket} --zones ${join(",", var.zones)} --master-size=${var.master_size} --node-size=${var.node_size} --yes"
   }
 
   provisioner "local-exec" {

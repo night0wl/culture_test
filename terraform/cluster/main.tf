@@ -5,7 +5,7 @@
 
 module "kops_k8s_cluster" {
   source       = "../modules/kube"
-  cluster_name = "alphacluster.k8s.local"
-  s3_bucket    = "mrevell-culture-trip"
-  zones        = "eu-west-1a"
+  cluster_name = "${var.cluster_name}"
+  s3_bucket    = "${var.s3_bucket}"
+  zones        = "${var.zones}"
 }
